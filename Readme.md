@@ -18,7 +18,8 @@ python_server/
 │   ├── __pycache__/
 ├── utils/
 │   ├── __pycache__/
-│   └── vertexAIclient.py          # Vertex AI client utility
+│   └── vertexAIclient.py    
+      # Vertex AI client utility
 ├── .env                           # Environment variables file (optional)
 ├── .gitignore                     # Git ignore rules
 ├── app.yaml                       # App deployment configuration (optional)

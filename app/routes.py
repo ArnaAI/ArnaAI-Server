@@ -1,14 +1,12 @@
 from flask import Blueprint
-from python_server.app.controllers.test import test_prompt
+from utils.vertexAIclient import process_resume_and_analyze
 
 def initialize_routes(app):
-    # Create a Blueprint for API routes
+    """Setup routes for the Flask application."""
     api_bp = Blueprint('api', __name__, url_prefix='/api')
 
-    # Define GET route for /api/zenai
-
-    # Define POST route for /api/zenai
-    api_bp.add_url_rule('/test', view_func=test_prompt, methods=['GET'])
+    # Define POST route for file upload
+    api_bp.add_url_rule('/upload', view_func=process_resume_and_analyze, methods=['POST'])
 
     # Register the Blueprint with the Flask app
     app.register_blueprint(api_bp)

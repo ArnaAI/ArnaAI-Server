@@ -7,3 +7,12 @@ google-cloud-aiplatform
 langchain
 requests
 langchain_google_vertexai
+
+#new
+Flask
+flask-cors
+PyMuPDF
+Werkzeug
+langchain-google-vertexai
+google-auth
+
