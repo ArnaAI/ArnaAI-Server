@@ -7,3 +7,4 @@ google-cloud-aiplatform
 langchain
 requests
 langchain_google_vertexai
+pdfplumber
