@@ -1,34 +1,64 @@
-from flask import jsonify
+from flask import jsonify, request
 from langchain.prompts import PromptTemplate
 from utils.vertexAIclient import get_vertex_client
+import json
+import re
 
-# refer components / mockinterview / interview.tsx file 
-# inside endInterval Function call is made for this according to that fucntion return the response after proccesing here 
-
+# Function to generate feedback and summary based on interview session input
 def generate_interview_feedback():
-    # test code to check vertex ai , refernce to use vertex ai 
     try:
-        # Get the Vertex AI client from the app context
+        # Parse input data from the request
+        data = request.get_json()
+
+        if not data or "userName" not in data or "answers" not in data:
+            return jsonify({"error": "Invalid input format. 'userName' and 'answers' fields are required."}), 400
+
+        user_name = data["userName"]
+        answers = data["answers"]
+
+        # Serialize answers into a string format for the prompt
+        answers_text = "\n".join([f"{question}: {response}" for question, response in answers.items()])
+
+        # Get the Vertex AI client
         vertex_client = get_vertex_client()
-        
-        # Define a simple LangChain PromptTemplate
+
+        # Define a LangChain PromptTemplate for feedback and summary generation
         prompt_template = PromptTemplate(
-            input_variables=["task"],
-            template="Please perform the following task: {task}",
+            input_variables=["user_name", "answers_text"],
+            template="""Based on the following interview session, generate the following:
+
+            1. A personalized summary of the candidate's performance.
+            2. Constructive feedback highlighting strengths and areas for improvement.
+
+            Ensure the output is formatted strictly in this JSON structure:
+            {{
+                "summary": "Brief summary of candidate performance.",
+                "feedback": "Brief feedback for candidate performance"
+            }}
+
+            Candidate Name: {user_name}
+            Interview Answers: {answers_text}
+
+            Ensure the JSON is correctly structured without additional text or explanations.""",
         )
-        
-        # Define a small test task
-        task = "Write a motivational quote"
 
         # Build the final prompt
-        prompt = prompt_template.format(task=task)
+        prompt = prompt_template.format(user_name=user_name, answers_text=answers_text)
 
         # Send the prompt to Vertex AI
         response_text = vertex_client.send_prompt(prompt)
 
-        # Return the response as JSON
-        return jsonify({'response': response_text}), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        # Validate and extract JSON response
+        json_match = re.search(r'\{.*\}', response_text.strip(), re.DOTALL)
+        if not json_match:
+            raise ValueError("Valid JSON was not found in the response.")
 
-    
+        # Parse the JSON response
+        response_json = json.loads(json_match.group(0))
+
+        # Return the parsed JSON as the response
+        return jsonify(response_json), 200
+
+    except Exception as e:
+        # Handle and return errors
+        return jsonify({"error": str(e)}), 500
