@@ -98,7 +98,3 @@ def extract_links(firebase_url: str):
         }
         print(error_result)
         return error_result
-
-# Call the function with the Firebase URL
-firebase_url = 'https://firebasestorage.googleapis.com/v0/b/arna-ai-842da.firebasestorage.app/o/recruiter%2FBKSyEmKpTJej5XgBX4aMExn04QQ2%2FKwtlgyZeh8ts8VYajsjN%2FAsh_1734028731237.pdf?alt=media&token=7c2f147c-6d19-498a-9108-9580f7d2e403'
-extract_links(firebase_url)
