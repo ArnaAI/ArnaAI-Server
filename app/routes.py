@@ -20,3 +20,4 @@ def initialize_routes(app):
     api_bp.add_url_rule('/resumeshortlist', view_func=resumeshortlist, methods=['POST'])
     # Register the Blueprint with the Flask app
     app.register_blueprint(api_bp)
+    
