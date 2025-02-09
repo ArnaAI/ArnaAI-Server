@@ -1,13 +1,13 @@
 {
   "type": "service_account",
-  "project_id": "arna-ai-444404",
-  "private_key_id": "a8622dc5c4a98f3ea8822e062f7f61559fe3ee27",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGDTZ4GQzcjY1V\neCySr9XkLDd5kNlyM4PHDojEqdd8P/rK3fysstrs1Fdkri84irLW3BvVuixlW/Fs\nE17jlS3vPFusSARkNzwA+weHSnlVu49wXFOWVD3kusx47ohUgqD4kCJSK8EtXhrJ\nUoPAe764aa/+k0B/ChDw46XuXmeD2O8LB7YG61zKbbQeLUaJFrTYPqKki5oL7J3X\nCyvXjJp35DxTBxJ4RQQqwBV/KyixyNRbycSlkCHKjWw2SlvRqMua0TuKA/ATLSnW\n0Cwxe0eLpa16kQOetzv/JwYejVq1DVSSXSSNWgbEFWyd85JXZpEJ9Wb2be7TIGGz\nSsgiy/KhAgMBAAECggEAIyHN40ECVI9xnlM6iOzTIu4rCxAEWqtDuYhc/5HnTT2m\nNd1qCJKTnkZOmGgDrWKBNfcGowOrA3HrYhIPl4xrgRAybN27lbFsnfnpzHiMDIbA\ne5yNIVIhRpVSVzNtEJy5hE5BIFVtp6gVVVgjUf5Bh0IMO7sQSljVR34CfcXWU/9T\n/ytomQgIuYaWdHCKYCNnSFpTkvAZePmdRhN2bCzwTn5bhAi3CJC8aW8u04ZDmpwp\nyOdrtJiyyslBoeplvxgEnPe9Dy2p6S8XgiR8qpHklBxeNdC8TP/kZCzIsb1iRMvl\neWAOPUeahl8x3x5b6VATtwyJcZzBW5QEDSEcabYFiQKBgQDoXjUeVQ8W05xWevjK\nVagiza9dxQHmrg6twd+Va47lm9ewYqdKd/unMREKj60FJj/avg6t1xLTfjcBzUx6\nUdY4rhwC0MTONV6l7L1fL3jPaH8iQUNVsxU66gPBoMwQoH40JinqfqjUXNwh50+K\nu+x3zdO1sRgBYgSrLtDHezqV5QKBgQDaMZCMCUSlJYyx8U/h/32DXrKiuuF/o4Qc\nSOcBLKm4cHxpLpDt/c2m9e1a665iEG8rVkqmU0Dn6fh9H7IVIG9HVuIe80yE0bTS\n9oazABTgDV+Xj/SdWxXsP+ippzT/B8AgoDkXvfI9KSo/FzfD1dTpJnU0oZYeO2ck\nO1IZsiOeDQKBgQDQRahMwKaeqhrltKEMEgx67WrynCMhFP+ZJD13mwlgqfeAZFxX\ntgU8jREeKztEc00mjdVwYWbBY85/8fhLZtCgywXWTDMqNNHZ3MC78TvSg3H4TRDC\nXpp3zMqDIdHmUUPtEAvf35kJhxXT2ZUE332KwFSy9MF0c9uFZ5fARKZ1NQKBgQCv\nIP0+COpaC2uEH4XYhXK+kLGcv5bjFeGhujn/zVNkQJT6729QNlhsXBPo2CYde8de\n52H/Ye9EtZzHATu0jVYD0o6n/Ow75v3WHh07ayNWOiWxxs+1xTgxaZJbKWP2Fsh0\n52Ur0z+tK29HOGGABA9iG4YTema9WTyN7jcVfM/tuQKBgDNTxZ2DTG0jG/hI1J03\nLttmBKExXr66Gw6v8p2bXjDfAjRwPjmeCjjdYbWeLnsD7EKzMns1epDmHqwqdsCW\nq4zIPTwvT4/f9Sf3p7QOSwNwDiHS4pmNb9YL3rcbqdydYdvOa996BDVE6fe+rKrW\nyEkM+hj7ldjqKRe9A5mY8uAG\n-----END PRIVATE KEY-----\n",
-  "client_email": "arna-ai@arna-ai-444404.iam.gserviceaccount.com",
-  "client_id": "108021419648536346584",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/arna-ai%40arna-ai-444404.iam.gserviceaccount.com",
+  "client_x509_cert_url": ",
   "universe_domain": "googleapis.com"
 }
